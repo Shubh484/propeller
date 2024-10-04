@@ -1,0 +1,25 @@
+.custom-list {
+  list-style-type: none; /* Remove default list style */
+  padding: 0; /* Remove default padding */
+}
+
+.custom-list li {
+  position: relative; /* Enable positioning for the pseudo-element */
+  padding-bottom: 5px; /* Adjust the space between the text and the underline */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.custom-list li::after {
+  content: ""; /* Empty content for the pseudo-element */
+  position: absolute; /* Position it absolutely within the li */
+  left: 0; /* Align to the left of the li */
+  right: 0; /* Align to the right of the li */
+  bottom: 0; /* Align at the bottom of the li */
+  border-bottom: 2px solid #9d7abf; /* Set the underline color and thickness */
+  transform: scaleX(0); /* Initially hide the underline */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.custom-list li:hover::after {
+  transform: scaleX(1); /* Show the underline on hover */
+}
