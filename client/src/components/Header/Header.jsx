@@ -4,7 +4,7 @@ import "./header.css";
 const Header = () => {
   return (
     <div className="flex justify-between items-center ml-8 mr-8 mt-8 ">
-      <span className="text-5xl font-bold ">Propeller</span>
+      <span className="text-5xl font-bold text-[#6b3a9c]">Propeller</span>
       <ul className="flex justify-center items-center  space-x-6 custom-list mt-4">
         <li className="font-sans text-[18px] font-medium  ">
           what is propeller
