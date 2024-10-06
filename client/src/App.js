@@ -1,20 +1,15 @@
-import Features from "./components/Features/Features";
-import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
-import Hero from "./components/Hero/Hero";
-import Testimonial from "./components/Testimonial/Testimonial";
-import Working from "./components/working/Working";
+import Signup from "./components/Signup/Signup";
+import Home from "./pages/Home";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Hero />
-      <Features />
-      <Working />
-      <Testimonial />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route exact path="/" Component={Home} />
+        <Route path="/signup" Component={Signup} />
+      </Routes>
+    </Router>
   );
 }
 
